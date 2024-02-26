@@ -7,7 +7,7 @@ If you are not a Python or Javascript guru, don't panic!
 ## Usage
 To get started, clone this repository locally:
 ```shell
-git clone https://github.com/dockersamples/avatars.git
+git clone https://github.com/aashishgautam/docker-compose-watch
 ```
 All subsequent commands assume they are run from the root repository directory
 (i.e. `avatars/` folder).
@@ -55,7 +55,7 @@ Run `kubectl --context=docker-desktop --namespace=avatars logs -l='app.kubernete
 
 
 ```
-git clone https://github.com/dockersamples/avatars
+git clone https://github.com/aashishgautam/docker-compose-watch
 cd avatars
 docker compose up -d
 ```
@@ -70,4 +70,15 @@ docker compose watch
 
 ```
 docker compose alpha viz
+```
+## Run docker compose watch in backgrounf using pm2 tool
+
+```
+pm2 start pm2.config.js        
+```
+
+## Check status of our watch process
+
+```
+pm2 status docker-compose-watch
 ```
